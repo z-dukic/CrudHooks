@@ -1,6 +1,6 @@
-package com.project.Empyloee.repository;
+package com.project.Springbootbackend.repository;
 
-import com.project.Empyloee.model.Employee;
+import com.project.Springbootbackend.model.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

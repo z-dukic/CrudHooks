@@ -1,4 +1,4 @@
-package com.project.Empyloee.model;
+package com.project.Springbootbackend.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -7,9 +7,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
 @Entity
 @Table(name = "employees")
 public class Employee {
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,8 +30,8 @@ public class Employee {
 
     }
 
-    public Employee(long id, String firstName, String lastName, String emailId) {
-        this.id = id;
+    public Employee(String firstName, String lastName, String emailId) {
+        super();
         this.firstName = firstName;
         this.lastName = lastName;
         this.emailId = emailId;

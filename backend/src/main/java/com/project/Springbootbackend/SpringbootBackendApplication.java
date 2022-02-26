@@ -1,4 +1,4 @@
-package com.project.Empyloee;
+package com.project.Springbootbackend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,6 +8,8 @@ public class SpringbootBackendApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootBackendApplication.class, args);
+
+        System.out.println("All good Captain");
 	}
 
 }
