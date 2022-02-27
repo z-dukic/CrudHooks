@@ -1,9 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import EmployeeService from '../services/EmployeeService'
 
 const ListEmployeeComponent = () => {
+
+    useEffect(() => {
+
+        EmployeeService.getAllEmployees().then((response) =>{
+            setEmployees(response.data)
+            console.log(response.data)
+        }).catch(error => {
+            console.log(error);
+        })
+
+    }, [])
+
 
     //What you change, how = curret value
     const [employees, setEmployees] = useState([])
@@ -36,6 +48,7 @@ const ListEmployeeComponent = () => {
                                     </td>
                                 </tr>
                         )
+                        
                     }
                 </tbody>
             </table>
